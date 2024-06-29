@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agricultural Business Website</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-J7s1MGNLPhC+62PkLELWjDg7HtA/rLrXpVhPJFx62kCqVfw1VeApT/TzIfNoMz5qqmuwWdRUCcD/cI6oR/38cQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <header id="header">
+        <div class="container">
+            <div class="logo">
+                <img src="image.png" alt="Logo">
+                
+            </div>
+            <button class="menu-toggle">&#9776;</button>
+            <nav class="menu">
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#blog">Blog</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <li><a href="Team.html">Team</a></li>
+                    <li><a href="#home" onclick="hi()">Sign Up</a></li>
+                    <li><a href="#home" onclick="hi()">Sign In</a></li>
+                </ul>
+            </nav>
+            <script>
+                const menuToggle = document.querySelector('.menu-toggle');
+                const menu = document.querySelector('.menu');
+        
+                menuToggle.addEventListener('click', () => {
+                    menu.classList.toggle('active');
+                });
+        
+                // Close the menu when clicking outside of it
+                document.addEventListener('click', (e) => {
+                    if (!menu.contains(e.target) && !menuToggle.contains(e.target)) {
+                        menu.classList.remove('active');
+                    }
+                });
+            </script>
+        </div>
+    </header>
+    
+    <section id="home" class="hero">
+        <div class="container">
+            <h1>Welcome to MadavJadibuti</h1>
+            <p>Discover fresh and sustainable produce directly from our farm to your table.</p>
+            <a href="#contact" class="btn">Contact Us</a>
+        </div>
+    </section>
+
+    <section id="about" class="about">
+        <div class="container">
+            <h2>About Us</h2>
+            <p>Welcome to MadavJadibuti, where we cultivate the finest produce with care and dedication. Nestled in Gulmi/Digam, our farm is committed to sustainable practices that bring you fresh, organic fruits and vegetables. With a passion for quality and community, we strive to deliver wholesome goodness straight from our fields to your table. Explore our range of products and experience the essence of farm-fresh goodness with every bite.
+
+            </p>
+        </div>
+    </section>
+
+    <section id="blog" class="blog">
+        <div class="container">
+            <h2>Our Blog</h2>
+            <div class="blog-posts">
+                <!-- Example blog post cards -->
+                <div class="blog-post">
+                    <img src="harvest.jpg" alt="Blog Post 1">
+                    <div class="blog-content">
+                        <h3>Harvest Insights: Fresh Perspectives from Our Fields</h3>
+                        <p>Explore our blog, where we share firsthand experiences, tips, and deep insights into sustainable farming practices, seasonal produce updates, and stories from our dedicated team. Whether you're a fellow farmer, a food enthusiast, or simply curious about farm-to-table goodness, join us on a journey through the bountiful world of agriculture.</p>
+                        <a href="#" class="btn">Read More</a>
+                    </div>
+                </div>
+                <div class="blog-post">
+                    <img src="lemon.jpg" alt="Blog Post 2">
+                    <div class="blog-content">
+                        <h3>Discover the Benefits of Organic Farming</h3>
+                        <p>Explore the advantages of organic farming with us at [Your Business Name]. From promoting healthier living to preserving our environment, learn why organic practices are essential for sustainable agriculture and superior produce quality.
+
+                        </p>
+                        <a href="#" class="btn">Read More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="services" class="services">
+        <div class="container">
+            <h2>Our Services</h2>
+            <div class="services-list">
+                <div class="service">
+                    <i class="fas fa-tractor"></i>
+                    <h3>Farm Services</h3>
+                    <p>Offering comprehensive farming solutions from seeding to harvest.</p>
+                </div>
+                <div class="service">
+                    <i class="fas fa-seedling"></i>
+                    <h3>Organic Produce</h3>
+                    <p>Delivering organic fruits and vegetables grown with care.</p>
+                </div>
+                <div class="service">
+                    <i class="fas fa-shipping-fast"></i>
+                    <h3>Fast Delivery</h3>
+                    <p>Ensuring prompt and efficient delivery of your orders.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2>Contact Us</h2>
+            <form action="store.php" method="POST">
+                <input type="text" name="name" placeholder="Your Name" required>
+                <input type="email" name="email" placeholder="Your Email" required>
+                <textarea name="message" placeholder="Your Message" required></textarea>
+                <button type="submit" value="done" class="btn" onclick="hello()">Send Message</button>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Shree Madhav Jadibuti Falful Krishi Tatha Pashupanchi Farm. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
